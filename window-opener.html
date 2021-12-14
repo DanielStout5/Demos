@@ -1,0 +1,24 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Window Close Test</title>
+</head>
+
+<body>
+  
+  <script>
+    setTimeout(() => {
+      alert("Opening Window");
+      var openedWindow = window.open("/window-close");
+      var interval = setInterval(() => {
+        if (openedWindow.closed) {
+          alert("Window has been closed");
+          clearInterval(interval);
+        }
+      }, 100);
+    }, 1000);
+  </script>
+</body>
+</html>
