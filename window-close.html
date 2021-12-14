@@ -13,6 +13,7 @@
     setTimeout(() => {
       try {
         window.close();
+        alert("Window closed without error?");
       } catch(ex) {
         alert('Failed to close', ex);
       }
