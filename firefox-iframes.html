@@ -1,0 +1,18 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Firefox iframe bug</title>
+</head>
+
+<body>
+  <iframe src="https://example.org"></iframe>
+  
+  <script>
+    var frame = document.createElement('iframe');
+    frame.src = 'https://example.com'
+    document.body.appendChild(frame);
+  </script>
+</body>
+</html>
