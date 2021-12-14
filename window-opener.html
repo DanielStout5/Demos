@@ -8,17 +8,18 @@
 
 <body>
   
+  <button onclick="openWindow">Open Window</button>
   <script>
-    setTimeout(() => {
-      alert("Opening Window");
+    
+    function openWindow() {
       var openedWindow = window.open("/window-close");
       var interval = setInterval(() => {
         if (openedWindow.closed) {
           alert("Window has been closed");
           clearInterval(interval);
         }
-      }, 100);
-    }, 1000);
+      });
+   }
   </script>
 </body>
 </html>
